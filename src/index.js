@@ -160,7 +160,7 @@ class MikroNode {
 
         const login=(user,password,cb)=>{
             this.debug>=DEBUG.DEBUG&&console.log('Logging in');
-            stream.write('/login');
+            stream.write(['/login', `=name=${user}`, `=password=${password}`]);
             const {promise,resolve,reject}=getUnwrappedPromise();
             // Create a connection handler
             this.connection=new Connection(
