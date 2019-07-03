@@ -10,7 +10,7 @@
     "compile:debug": "f(){ webpack --entry=\"$1\" --output-path=./.compiled --output-filename=debug.js; };f",
     "precompile:debug": "rm -rf .compiled",
     "clean": "rm -rf dist .compiled",
-    "prepublish": "npm run build"
+    "prepare": "npm run build"
   },
   "contributors": [
     {
